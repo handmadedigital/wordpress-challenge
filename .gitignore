@@ -1,0 +1,8 @@
+/data
+/vendor/
+/plugins/*
+!/plugins/index.php
+node_modules
+.env
+/themes/*
+!/themes/example-theme
