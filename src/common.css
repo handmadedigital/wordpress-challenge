@@ -1,3 +1,108 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Global */
+.button {
+  @apply rounded-md py-4 p-6 drop-shadow-sm transition ease-in-out delay-150;
+}
+
+.button:hover {
+  @apply drop-shadow-lg;
+}
+
+.button.is-primary {
+  @apply bg-indigo-600 text-white mt-4 inline-block;
+}
+
+.button.is-white {
+  @apply bg-white text-indigo-600 inline-block;
+}
+
+.button + .button {
+  @apply ml-4;
+}
+
+.h2 {
+  @apply text-4xl font-bold mb-4 text-center;
+}
+
+/* Header */
+.menu-item a {
+  @apply text-white;
+}
+
+.menu-button-container {
+  @apply hidden;
+}
+
+.menu-wrapper {
+  @apply flex md:ml-8;
+}
+
+.menu-item {
+  @apply mr-2;
+}
+
+/* Footer */
+.menu-footer-container .menu-item a {
+  @apply text-gray-500;
+}
+
+/* Hero Banner */
+.hero-banner {
+	@apply flex;
+}
+
+.hero-banner-content,
+.hero-banner-image {
+  @apply basis-1/2;
+}
+
+.hero-banner-content {
+  @apply py-48 px-8;
+}
+
+.hero-banner-content h1 {
+  @apply text-6xl mb-8 font-sans text-gray-900 font-bold;
+}
+
+.hero-banner-content p {
+  @apply mb-2 text-gray-500 text-base;
+}
+
+.hero-banner-image {
+  @apply bg-cover bg-center;
+}
+
+/* Card */
+@layer components {
+  .card {
+    @apply overflow-hidden mb-4;
+    background-color: theme('colors.white');
+    border-radius: theme('borderRadius.lg');
+    box-shadow: theme('boxShadow.xl');
+  }
+  .card-image {
+    @apply w-full aspect-video bg-cover bg-center;
+  }
+  .card-content {
+    @apply p-6;
+  }
+  .card-title {
+    @apply text-xl font-bold text-base text-gray-900 mb-2;
+  }
+
+  .card-text {
+    @apply text-base text-gray-500 font-light;
+  }
+}
+
+/* RTE */
+.rte {
+  @apply text-gray-500 leading-7;
+}
+
+.rte > * {
+  @apply mb-4;
+}
